@@ -1,0 +1,19 @@
+# Données brutes et liste des domaines : jamais publiées
+donnees/domaines.csv
+domaines.csv
+mesures*.csv
+evaluation*.csv
+rapport*.html
+resultats/
+
+# Journal des exécutions du moteur (chemins locaux)
+journal_executions.jsonl
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+travail/
+petit_echantillon.csv
+export_test/
+docs_test/

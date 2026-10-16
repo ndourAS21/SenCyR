@@ -1,0 +1,197 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SenCyR · Méthode</title>
+  <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/fond.js"></script>
+  <script src="js/entete.js"></script>
+  <script src="js/animations.js"></script>
+</head>
+<body>
+  <header class="entete">
+    <div class="entete-barre">
+      <a class="marque" href="index.html" aria-label="SenCyR, accueil">
+        <img src="img/logo-sencyr.svg" alt="" width="36" height="36">
+        <span class="nom" aria-hidden="true"><span class="sen">Sen</span><span class="cyr">CyR</span></span>
+      </a>
+      <nav aria-label="Navigation principale">
+        <a href="index.html">Accueil</a>
+        <a href="diagnostic.html">Auto-diagnostic</a>
+        <a href="tableau-de-bord.html">Tableau de bord</a>
+        <a href="benchmark.html">Benchmark</a>
+        <a href="methode.html" aria-current="page">Méthode</a>
+      </nav>
+    </div>
+  </header>
+  <p class="marque-impression" aria-hidden="true"><span class="sen">Sen</span><span class="cyr">CyR</span></p>
+
+  <main class="conteneur">
+    <h1>Méthode</h1>
+    <p>
+      La grille adapte le CMM 2021 : cinq dimensions, leurs facteurs, une échelle à trois niveaux
+      et des règles explicites (R1 à R6). L'évaluation nationale s'appuie sur des sources
+      ouvertes ; les facteurs que les sources publiques ne permettent pas d'apprécier sont
+      complétés, lorsque c'est possible, par une mesure technique passive.
+    </p>
+    <nav aria-label="Sommaire de la page" class="note sommaire">
+      <a href="#echelle">Échelle</a> <a href="#regles">Règles R1 à R6</a> <a href="#fiabilite">Fiabilité des sources</a>
+      <a href="#fonctions">Fonctions de résilience</a> <a href="#mesure">Facteurs mesurés et seuils</a> <a href="#reglage">Réglage par questionnaire</a> <a href="#wilson">Lire la confiance</a>
+      <a href="#protocole">Protocole de mesure</a> <a href="#diffusion">Diffusion</a>
+      <a href="#choix">Choix propres à l'outil</a> <a href="#limites">Limites</a>
+    </nav>
+
+    <h2 id="echelle">Échelle</h2>
+    <div class="defile"><table>
+      <thead><tr><th scope="col">Niveau ou statut</th><th scope="col">Définition (maturité seulement)</th><th scope="col">Équivalent indicatif CMM</th></tr></thead>
+      <tbody>
+        <tr><td>Non évaluable (statut hors échelle)</td><td>Aucune source publique suffisamment fiable ne permet d'apprécier le facteur</td><td>Aucun</td></tr>
+        <tr><td>Émergent</td><td>Dispositif inexistant, annoncé, en projet ou partiel</td><td>Start-up à formative</td></tr>
+        <tr><td>Structuré</td><td>Dispositif en place et formalisé</td><td>Established</td></tr>
+        <tr><td>Consolidé</td><td>Dispositif coordonné, durable et ajusté dans le temps</td><td>Strategic (le stade dynamic est hors de portée d'une analyse documentaire)</td></tr>
+      </tbody>
+    </table></div>
+    <p class="note">Le statut « hors périmètre » s'applique au facteur D1.4 (cybersécurité de la défense et de la sécurité nationale),
+      non documentable en sources ouvertes.</p>
+
+    <h2 id="regles">Règles R1 à R6</h2>
+    <div class="defile"><table>
+      <thead><tr><th scope="col">Règle</th><th scope="col">Énoncé</th></tr></thead>
+      <tbody>
+        <tr><th scope="row">R1 — Intentions</th><td>Une annonce, un projet de texte ou une structure créée par un texte mais non installée ne dépasse jamais le niveau émergent. Seuls les textes adoptés et les dispositifs en fonctionnement peuvent justifier les niveaux structuré ou consolidé.</td></tr>
+        <tr><th scope="row">R2 — Absence de trace publique</th><td>Pour un dispositif qui n'existe qu'en étant public (stratégie, loi, avis d'un CERT, politique de divulgation), l'absence de trace publique vaut indice et peut fonder l'appréciation. Pour les autres (budget, contrôles internes, compétences), elle rend le facteur non évaluable.</td></tr>
+        <tr><th scope="row">R3 — Confiance</th><td>La confiance porte sur la justesse du niveau attribué, non sur la maturité. Élevé : au moins deux sources convergentes sur le niveau attribué, dont une de niveau A (un texte officiel suffit à établir sa propre existence). Moyen : une source A ou B non recoupée, ou plusieurs sources B ou C convergentes sans source A ; c'est aussi le plafond lorsque le niveau repose principalement sur l'absence de trace d'un dispositif public par nature (R2). Faible : source C seule ou source indirecte. Une source D n'entre pas dans le décompte ; un facteur non évaluable ne reçoit pas de niveau de confiance.<br><span class="note">La convergence porte sur le niveau attribué, et non sur la seule existence d'une politique ou d'une intention.</span></td></tr>
+        <tr><th scope="row">R4 — Incidents</th><td>Un incident ne fonde jamais seul l'appréciation d'un facteur. Il sert à la triangulation et peut abaisser un niveau de confiance ou signaler une lacune.</td></tr>
+        <tr><th scope="row">R5 — Agrégation</th><td>Le niveau d'une dimension est le niveau le plus fréquent parmi ses facteurs évaluables ; en cas d'égalité, le niveau inférieur est retenu. Sa confiance est la plus faible de celles des facteurs qui déterminent ce niveau, et le nombre de facteurs évaluables est indiqué (par exemple : « émergente, 2 facteurs évaluables sur 4, confiance faible »). Un facteur décomposé en aspects prend le niveau de son aspect évaluable le moins avancé. Une dimension sans facteur évaluable est non évaluable.</td></tr>
+        <tr><th scope="row">R6 — Priorité des lacunes</th><td>Seuls les facteurs émergents constituent des lacunes à hiérarchiser. Trois critères : portée (le facteur conditionne la fonction « répondre et se rétablir » ou au moins deux des quatre fonctions de résilience (tableau des fonctions ci-dessous), la ligne transversale n'étant pas comptée) ; exposition (les incidents 2023-2026 en montrent l'urgence) ; faisabilité (la réforme en cours, notamment le projet de loi n°25/2026 adopté le 20 août 2026, offre un levier). Priorité 1 : trois critères réunis ; priorité 2 : deux ; priorité 3 : un ou aucun. Les recommandations visant un facteur structuré ou non évaluable ne sont pas hiérarchisées.</td></tr>
+      </tbody>
+    </table></div>
+    <h3>Application de R3 dans l'outil</h3>
+    <ul>
+      <li>Chaque facteur porte une indication « sources convergentes » (oui par défaut).</li>
+      <li>Si les sources ne convergent pas sur le niveau, aucune ne recoupe les autres : le niveau repose
+        sur une source non recoupée, d'où une confiance moyenne s'il existe une source A ou B, faible
+        s'il n'existe que des sources C.</li>
+      <li>Dans l'évaluation du Sénégal, c'est le cas de D2.1 et de D5.1 : les sources convergent sur
+        l'existence d'une politique ou d'une intention, pas sur le niveau attribué.</li>
+    </ul>
+
+    <h2 id="fiabilite">Niveaux de fiabilité des sources</h2>
+    <p>Le corpus est classé selon quatre niveaux de fiabilité : A, textes officiels (lois, décrets, stratégies, actes et registres officiels des engagements internationaux, communications institutionnelles) et statistiques publiques nationales, qui constituent le niveau de preuve principal ; B, rapports et indices d’organisations internationales et publications scientifiques, qui construisent le cadre théorique et permettent la triangulation ; C, presse spécialisée reconnue, qui documente les événements récents lorsque les sources institutionnelles font défaut ; D, contenus non institutionnels (réseaux sociaux, revendications, forums), jamais utilisés seuls comme preuve. Le GCI est classé au niveau B : publié par une organisation internationale, il repose sur des déclarations des États et n’a pas la valeur d’un texte officiel sénégalais. Dans l’outil, les sources D sont ignorées (R3).</p>
+
+    <h2 id="fonctions">Fonctions de résilience</h2>
+    <div class="defile"><table>
+      <thead><tr><th scope="col">Fonction de résilience</th><th scope="col">Facteurs du CMM 2021 qui la conditionnent principalement</th><th scope="col">Question posée au cas sénégalais</th></tr></thead>
+      <tbody>
+        <tr><td>Anticiper</td><td>D1.1 Stratégie nationale ; D1.3 Protection des infrastructures critiques ; D2.1 État d'esprit de cybersécurité ; D3.1 Sensibilisation</td><td>Les risques sont-ils identifiés et priorisés ?</td></tr>
+        <tr><td>Résister</td><td>D5.1 Adhésion aux normes ; D5.2 Contrôles de sécurité ; D5.3 Qualité logicielle ; D5.4 Résilience des infrastructures de communication et d'Internet ; D5.6 Divulgation responsable ; D3.3 Formation professionnelle</td><td>Les systèmes essentiels sont-ils protégés ?</td></tr>
+        <tr><td>Répondre et se rétablir</td><td>D1.2 Réponse aux incidents et gestion de crise ; D2.4 Mécanismes de signalement ; D4.3 Capacités juridiques et réglementaires ; D4.4 Coopération contre la cybercriminalité</td><td>Les incidents sont-ils détectés, traités et communiqués ?</td></tr>
+        <tr><td>S'adapter</td><td>D1.1a Stratégie (sa révision) ; D3.4 Recherche et innovation ; D4.1 Dispositions juridiques et réglementaires (leur actualisation)</td><td>Les enseignements sont-ils tirés et intégrés ?</td></tr>
+        <tr><td>Contribution transversale</td><td>D2.2 Confiance dans les services en ligne ; D2.3 Compréhension de la protection des données personnelles ; D2.5 Médias et plateformes en ligne ; D3.2 Enseignement de la cybersécurité ; D4.2 Cadre législatif connexe</td><td>Les conditions humaines et sociales de la résilience sont-elles réunies ?</td></tr>
+      </tbody>
+    </table></div>
+    <p>
+      L'outil donne un niveau à chaque fonction en appliquant la même agrégation que R5 aux facteurs
+      qui la conditionnent. Pour « s'adapter », D1.1 est pris par son aspect « stratégie » (D1.1a),
+      qui porte la révision ; pour « anticiper », par le facteur entier.
+      Le facteur D5.5 (marché de la cybersécurité) n'est rattaché à aucune fonction.
+    </p>
+
+    <h2 id="mesure">Facteurs mesurés et seuils</h2>
+    <p>
+      Trois facteurs de la dimension 5 ne sont pas documentés par des sources publiques suffisantes.
+      L'outil les approche par des indicateurs techniques mesurés sur les sites publics :
+    </p>
+    <div class="defile"><table id="t-mesures"></table></div>
+    <ul id="seuils">
+      <li>Niveau d'un indicateur, selon la part des domaines conformes : <span data-param="seuils"></span>.</li>
+      <li>Niveau d'un facteur mesuré : celui de son indicateur le moins avancé.</li>
+      <li>Confiance d'un indicateur mesuré : intervalle de Wilson à <span data-param="echantillon"></span> de la part de domaines conformes. Élevée si l'intervalle reste dans la zone du niveau retenu ; moyenne s'il déborde sur une zone voisine ; faible s'il couvre les trois zones. La confiance d'un facteur est la plus faible parmi les indicateurs qui fixent son niveau.</li>
+      <li>DNSSEC est compté une fois par zone DNS.</li>
+      <li>Un indicateur complémentaire est publié à côté du niveau documentaire, sans le modifier.</li>
+    </ul>
+    <p class="note">Ces seuils et ce rattachement sont lus dans le fichier de paramètres de l'outil ;
+      ils peuvent être modifiés sans toucher au code.</p>
+
+    <h2 id="reglage">Réglage par questionnaire</h2>
+    <p>
+      Les seuils de <span data-param="seuil_structure"></span> et <span data-param="seuil_consolide"></span> ont été réglés à partir d'un questionnaire en ligne adressé à
+      68 personnes (30 réponses, soit 44 %), parmi lesquelles des étudiants, des professionnels de
+      la sécurité et d'autres professionnels de l'informatique. Les répondants ont placé le seuil
+      à partir duquel une pratique de sécurité est « en place » (médiane 6 sur 10, soit <span data-param="seuil_structure"></span>)
+      et celui à partir duquel elle est « bien installée » (médiane 8 sur 10, soit <span data-param="seuil_consolide"></span>).
+      Le premier seuil repose sur une courte majorité (13 réponses valides sur 23 au-dessus de 5) ;
+      un seuil de 50 % ne change aucun niveau de l'évaluation nationale. L'échantillon est restreint
+      et n'est pas représentatif : ce réglage est un choix argumenté, non une norme.
+    </p>
+
+    <h2 id="wilson">Lire la confiance d'une mesure</h2>
+    <p>
+      Une part observée sur un petit nombre de domaines est moins sûre qu'une part observée sur un
+      grand nombre. L'intervalle de Wilson donne la plage où se situe vraisemblablement la vraie
+      part (par exemple 50 % observés sur 40 domaines : entre 35 % et 65 %). Si cette plage reste dans
+      la zone d'un seul niveau, la confiance est élevée ; si elle chevauche deux zones, moyenne ;
+      trois zones, faible. Elle exprime la précision de la mesure, non la qualité de la sécurité :
+      un niveau « émergent » peut être établi avec une confiance élevée.
+    </p>
+
+    <h2 id="protocole">Protocole de mesure passive</h2>
+    <ul>
+      <li>Requêtes publiques standard seulement : résolution DNS, connexion HTTPS, lecture des en-têtes.</li>
+      <li>Une requête par service et par domaine, renouvelée une fois sans vérification si le certificat est refusé ; la requête en https:// suit les redirections.</li>
+      <li><span data-param="delai"></span> entre deux domaines, délai d'expiration de <span data-param="timeout"></span> par connexion.</li>
+      <li>En-tête User-Agent identifiant la recherche et une adresse de contact.</li>
+      <li>Aucun scan de ports, aucune recherche de vulnérabilité, aucune tentative d'accès.</li>
+      <li>Indicateurs relevés : certificat et version TLS, redirection HTTPS, en-têtes de sécurité (HSTS, CSP,
+        X-Frame-Options, X-Content-Type-Options, Referrer-Policy), SPF, DMARC, signature DNSSEC de la zone,
+        pays d'hébergement.</li>
+    </ul>
+
+    <h2 id="diffusion">Diffusion des résultats</h2>
+    <ul>
+      <li>Seuls des agrégats par pays et par famille de secteurs sont publiés ; l'agrégation est faite
+        par le moteur, avant publication.</li>
+      <li>Une famille qui compte moins de <span data-param="minimum"></span> domaines n'est pas publiée.</li>
+      <li>Aucun nom d'institution, de domaine ou d'opérateur d'hébergement n'est publié.</li>
+      <li>L'auto-diagnostic fonctionne entièrement dans le navigateur : la saisie n'est transmise nulle part.</li>
+    </ul>
+
+    <h2 id="choix">Choix propres à l'outil</h2>
+    <ul>
+      <li>Niveau par fonction de résilience : agrégation R5 par fonction, absente de l'évaluation manuelle.</li>
+      <li>Critère de portée (R6) déduit du rattachement des facteurs aux fonctions plutôt que renseigné à la main ; résultat identique
+        pour les facteurs du Sénégal.</li>
+      <li>D5.2 et D5.4, non évaluables par les sources documentaires, deviennent évaluables par la mesure.</li>
+      <li>Confiance des facteurs mesurés fondée sur l'intervalle de Wilson des indicateurs, R3 ne s'appliquant pas à une mesure.</li>
+      <li>Facteur décomposé en aspects : niveau donné par les aspects (R5), confiance donnée par R3 sur
+        l'ensemble des sources du facteur.</li>
+    </ul>
+
+    <h2 id="limites">Limites</h2>
+    <ul>
+      <li>Une redirection passant par http://www. est comptée non conforme.</li>
+      <li>Des sites de la liste initiale, en particulier marocains, étaient inaccessibles depuis le lieu de mesure ; ils ont été remplacés, sans qu'on sache s'il s'agissait d'un blocage ou d'une panne.</li>
+      <li>DNSSEC est compté par zone DNS : le taux par zone est inférieur au taux par site.</li>
+      <li>Seule la version de TLS négociée est observée.</li>
+      <li>DNSSEC : présence d'un enregistrement DS, pas validation de la chaîne.</li>
+      <li>Pays d'hébergement : pays d'enregistrement du bloc d'adresses IP auprès du registre régional, adresses IPv4 seulement. Ce n'est pas une géolocalisation : un site peut être servi ailleurs.</li>
+      <li>DMARC est lu sur le nom exact du domaine, sans remonter vers un domaine parent.</li>
+      <li>Les en-têtes sont lus même quand le certificat est refusé.</li>
+      <li>Un échec de connexion HTTPS est confondu avec une absence d'en-têtes.</li>
+      <li>SPF est mesuré mais n'est rattaché à aucun facteur.</li>
+      <li>L'auto-diagnostic est déclaratif et n'est pas vérifié.</li>
+      <li>Les résultats n'ont pas de valeur officielle.</li>
+    </ul>
+  </main>
+
+  <footer class="pied">
+    <div class="conteneur"><span class="sen">Sen</span><span class="cyr">CyR</span> © Copyright</div>
+  </footer>
+
+  <script src="js/regles.js"></script>
+  <script src="js/commun.js"></script>
+  <script src="js/methode.js"></script>
+</body>
+</html>

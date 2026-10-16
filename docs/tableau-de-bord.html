@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SenCyR · Tableau de bord</title>
+  <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/fond.js"></script>
+  <script src="js/entete.js"></script>
+  <script src="js/animations.js"></script>
+</head>
+<body>
+  <header class="entete">
+    <div class="entete-barre">
+      <a class="marque" href="index.html" aria-label="SenCyR, accueil">
+        <img src="img/logo-sencyr.svg" alt="" width="36" height="36">
+        <span class="nom" aria-hidden="true"><span class="sen">Sen</span><span class="cyr">CyR</span></span>
+      </a>
+      <nav aria-label="Navigation principale">
+        <a href="index.html">Accueil</a>
+        <a href="diagnostic.html">Auto-diagnostic</a>
+        <a href="tableau-de-bord.html" aria-current="page">Tableau de bord</a>
+        <a href="benchmark.html">Benchmark</a>
+        <a href="methode.html">Méthode</a>
+      </nav>
+    </div>
+  </header>
+  <p class="marque-impression" aria-hidden="true"><span class="sen">Sen</span><span class="cyr">CyR</span></p>
+
+  <main class="conteneur" id="contenu">
+    <h1>Tableau de bord national : Sénégal</h1>
+    <p class="avertissement">
+      Appréciation qualitative, sans valeur officielle. Niveaux et confiance selon les règles de la
+      page <a href="methode.html">Méthode</a>.
+    </p>
+    <div id="source" class="source" role="status">Chargement des données…</div>
+
+    <section id="vue" class="vue" aria-labelledby="titre-vue">
+      <h2 id="titre-vue">Vue d'ensemble</h2>
+      <div id="cles" class="cles"></div>
+
+      <div class="duo">
+        <div class="panneau">
+          <h3>Niveau par dimension</h3>
+          <p class="note pas-imprimer">Cliquer sur une dimension pour lister ses facteurs.</p>
+          <div id="barres-dimensions" class="barres-dimensions"></div>
+        </div>
+        <div class="panneau">
+          <h3>Dimensions × fonctions de résilience</h3>
+          <p class="note">Chaque case liste les facteurs (ou aspects) de la dimension qui conditionnent la fonction
+            (fonctions de résilience), colorés selon leur niveau.</p>
+          <div class="defile"><table id="croise" class="croise"></table></div>
+        </div>
+      </div>
+      <div id="legende-couleurs" class="legende" aria-label="Lire les couleurs"></div>
+
+      <div class="panneau">
+        <div class="panneau-tete">
+          <h3 id="titre-liste">Facteurs</h3>
+          <div id="filtres" class="filtres"></div>
+        </div>
+        <ul id="liste-facteurs" class="liste-facteurs" aria-labelledby="titre-liste"></ul>
+      </div>
+    </section>
+
+    <details class="bloc" id="bloc-1">
+      <summary><h2>1. Profil par dimension (R5)</h2></summary>
+      <p class="note pas-imprimer">Cliquer sur une dimension pour afficher ses facteurs ; cliquer sur un en-tête pour trier.</p>
+      <div class="defile"><table id="t-dimensions"></table></div>
+    </details>
+
+    <details class="bloc" id="bloc-2">
+      <summary><h2>2. Profil par fonction de résilience</h2></summary>
+      <p class="note">Même agrégation que R5, appliquée aux facteurs de chaque fonction (fonctions de résilience).</p>
+      <div class="defile"><table id="t-fonctions"></table></div>
+    </details>
+
+    <details class="bloc" id="bloc-3">
+      <summary><h2>3. Lacunes prioritaires (R6) et recommandations</h2></summary>
+      <div class="defile"><table id="t-priorites"></table></div>
+    </details>
+
+    <details class="bloc" id="bloc-4">
+      <summary><h2>4. Indicateurs techniques agrégés</h2></summary>
+      <div id="mesures"></div>
+    </details>
+
+    <details class="bloc" id="bloc-5">
+      <summary><h2>5. Détail par facteur</h2></summary>
+      <p class="note pas-imprimer">Les filtres de la vue d'ensemble s'appliquent aussi à ce tableau.</p>
+      <div class="defile"><table id="t-facteurs"></table></div>
+    </details>
+  </main>
+
+  <footer class="pied">
+    <div class="conteneur"><span class="sen">Sen</span><span class="cyr">CyR</span> © Copyright</div>
+  </footer>
+
+  <script src="js/regles.js"></script>
+  <script src="js/commun.js"></script>
+  <script src="js/tableau-de-bord.js"></script>
+</body>
+</html>

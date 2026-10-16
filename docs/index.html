@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SenCyR · Accueil</title>
+  <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/fond.js"></script>
+  <script src="js/entete.js"></script>
+  <script src="js/animations.js"></script>
+</head>
+<body>
+  <header class="entete">
+    <div class="entete-barre">
+      <a class="marque" href="index.html" aria-label="SenCyR, accueil">
+        <img src="img/logo-sencyr.svg" alt="" width="36" height="36">
+        <span class="nom" aria-hidden="true"><span class="sen">Sen</span><span class="cyr">CyR</span></span>
+      </a>
+      <nav aria-label="Navigation principale">
+        <a href="index.html" aria-current="page">Accueil</a>
+        <a href="diagnostic.html">Auto-diagnostic</a>
+        <a href="tableau-de-bord.html">Tableau de bord</a>
+        <a href="benchmark.html">Benchmark</a>
+        <a href="methode.html">Méthode</a>
+      </nav>
+    </div>
+  </header>
+  <p class="marque-impression" aria-hidden="true"><span class="sen">Sen</span><span class="cyr">CyR</span></p>
+
+  <main class="conteneur">
+    <section class="hero" aria-labelledby="titre-accueil">
+      <img class="hero-logo" src="img/logo-sencyr.svg" alt="" width="112" height="112">
+      <div class="hero-texte">
+        <h1 id="titre-accueil"><span class="nom-grand"><span class="sen">Sen</span><span class="cyr">CyR</span></span>
+          <span class="sous-titre">Sunu cyber-résilience</span></h1>
+        <p class="chapeau">
+          Plateforme d'évaluation de la cyber-résilience nationale, fondée sur une grille adaptée du
+          modèle de maturité des capacités de cybersécurité (CMM, édition 2021). Elle applique une
+          échelle à trois niveaux (émergent, structuré, consolidé) et des règles explicites de
+          confiance, d'agrégation et de priorité, et lit les résultats selon quatre fonctions de
+          résilience : anticiper, résister, répondre et se rétablir, s'adapter.
+        </p>
+        <a class="bouton" href="methode.html">En savoir plus</a>
+      </div>
+    </section>
+
+    <div id="reperes" class="reperes" aria-label="La grille en chiffres"></div>
+
+    <p class="avertissement">
+      Appréciation qualitative, sans valeur officielle. L'évaluation nationale repose sur des
+      sources ouvertes et sur une mesure technique passive ; l'auto-diagnostic repose sur les
+      déclarations de l'institution qui le remplit, sans vérification.
+    </p>
+
+    <h2>Public visé</h2>
+    <ul>
+      <li>La future Autorité nationale de cybersécurité prévue par le projet de loi n°25/2026, adopté le 20 août 2026.</li>
+      <li>Les administrations qui souhaitent situer leur propre dispositif.</li>
+      <li>Le jury du mémoire, pour l'examen de la méthode et des résultats.</li>
+    </ul>
+
+    <h2>Modules</h2>
+    <div class="modules">
+      <a class="module" href="diagnostic.html">
+        <strong>Auto-diagnostic</strong>
+        Renseigner sa situation facteur par facteur et obtenir niveaux, confiance, lacunes
+        prioritaires et recommandations. La saisie reste dans le navigateur.
+      </a>
+      <a class="module" href="tableau-de-bord.html">
+        <strong>Tableau de bord national</strong>
+        Profil du Sénégal par dimension et par fonction de résilience, priorités, indicateurs
+        techniques agrégés par famille de secteurs.
+      </a>
+      <a class="module" href="benchmark.html">
+        <strong>Comparaison entre pays</strong>
+        Sénégal, Ghana, Maroc, Côte d'Ivoire : indicateurs mesurés par la même méthode, à la même
+        date, et scores du Global Cybersecurity Index 2024 en référence.
+      </a>
+      <a class="module" href="methode.html">
+        <strong>Méthode</strong>
+        Échelle, règles R1 à R6, seuils, fonctions de résilience, protocole de mesure passive
+        et limites.
+      </a>
+    </div>
+
+    <h2>Données publiées</h2>
+    <p>
+      Le site ne publie que des résultats agrégés par pays et par famille de secteurs : aucune
+      institution, aucun domaine ni aucun opérateur d'hébergement n'y est nommé. Le détail par
+      domaine reste dans les fichiers locaux de l'étude.
+    </p>
+  </main>
+
+  <footer class="pied">
+    <div class="conteneur"><span class="sen">Sen</span><span class="cyr">CyR</span> © Copyright</div>
+  </footer>
+
+  <script src="js/regles.js"></script>
+  <script src="js/commun.js"></script>
+  <script src="js/accueil.js"></script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+[
+ {
+  "aspect": "D1.1a",
+  "facteur": "D1.1",
+  "intitule": "Stratégie",
+  "appreciation": "Émergent",
+  "sources": "8;35",
+  "niveaux": "A;A",
+  "absence_R2": "oui",
+  "indirecte": "non",
+  "convergentes": "oui",
+  "confiance_memoire": "Moyenne"
+ },
+ {
+  "aspect": "D1.1b",
+  "facteur": "D1.1",
+  "intitule": "Gouvernance centrale",
+  "appreciation": "Émergent",
+  "sources": "8;9;10;35",
+  "niveaux": "A;A;C;A",
+  "absence_R2": "non",
+  "indirecte": "non",
+  "convergentes": "oui",
+  "confiance_memoire": "Élevée"
+ },
+ {
+  "aspect": "D1.1c",
+  "facteur": "D1.1",
+  "intitule": "Ressources",
+  "appreciation": "Non évaluable",
+  "sources": "",
+  "niveaux": "",
+  "absence_R2": "oui",
+  "indirecte": "non",
+  "convergentes": "oui",
+  "confiance_memoire": "—"
+ }
+]

@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SenCyR · Auto-diagnostic</title>
+  <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/fond.js"></script>
+  <script src="js/entete.js"></script>
+  <script src="js/animations.js"></script>
+</head>
+<body>
+  <header class="entete">
+    <div class="entete-barre">
+      <a class="marque" href="index.html" aria-label="SenCyR, accueil">
+        <img src="img/logo-sencyr.svg" alt="" width="36" height="36">
+        <span class="nom" aria-hidden="true"><span class="sen">Sen</span><span class="cyr">CyR</span></span>
+      </a>
+      <nav aria-label="Navigation principale">
+        <a href="index.html">Accueil</a>
+        <a href="diagnostic.html" aria-current="page">Auto-diagnostic</a>
+        <a href="tableau-de-bord.html">Tableau de bord</a>
+        <a href="benchmark.html">Benchmark</a>
+        <a href="methode.html">Méthode</a>
+      </nav>
+    </div>
+  </header>
+  <p class="marque-impression" aria-hidden="true"><span class="sen">Sen</span><span class="cyr">CyR</span></p>
+
+  <main class="conteneur">
+    <h1>Auto-diagnostic de cyber-résilience</h1>
+    <p class="avertissement">
+      Appréciation qualitative et déclarative, sans valeur officielle. Les règles appliquées
+      sont celles de la grille (échelle, R3, R5, R6) décrites dans la page
+      <a href="methode.html">Méthode</a>. Les réponses saisies ne quittent pas votre navigateur.
+    </p>
+
+    <div class="actions pas-imprimer">
+      <button type="button" id="btn-exemple" class="secondaire">Charger l'exemple Sénégal</button>
+      <button type="button" id="btn-vider" class="secondaire">Réinitialiser</button>
+      <button type="button" id="btn-json" class="secondaire">Exporter JSON</button>
+      <button type="button" id="btn-csv" class="secondaire">Exporter CSV</button>
+      <button type="button" id="btn-imprimer" class="secondaire">Imprimer / PDF</button>
+    </div>
+    <p id="message" class="message" role="status"></p>
+
+    <section id="saisie" class="pas-imprimer" aria-labelledby="titre-saisie">
+      <h2 id="titre-saisie">1. Saisie, facteur par facteur</h2>
+      <details class="aide">
+        <summary>Comment remplir</summary>
+        <ul>
+          <li><strong>Niveau</strong> : émergent (inexistant, annoncé, en projet ou partiel), structuré
+            (en place et formalisé), consolidé (coordonné, durable, ajusté dans le temps), ou
+            « non évaluable » si aucune source fiable ne permet de l'apprécier. Une annonce ou un
+            projet ne dépasse pas « émergent » (R1).</li>
+          <li><strong>Sources A, B, C</strong> : nombre de sources qui fondent le niveau,
+            selon les niveaux de fiabilité de la grille (voir <a href="methode.html">Méthode</a>).
+            Les sources D ne comptent pas.</li>
+          <li><strong>Absence de trace (R2)</strong> : le niveau repose sur l'absence de trace
+            publique d'un dispositif public par nature.</li>
+          <li><strong>Source indirecte</strong> : le niveau n'est approché que par des indicateurs
+            indirects.</li>
+          <li><strong>Sources convergentes</strong> : les sources concordent sur le niveau attribué, pas seulement sur l'existence d'un dispositif ou d'une intention.
+            Décoché, le niveau repose sur une source non recoupée (R3).</li>
+          <li><strong>Aspects</strong> : un facteur décomposé en aspects prend le niveau de son aspect
+            évaluable le moins avancé (R5) ; son niveau est calculé, pas saisi.</li>
+          <li><strong>Exposition</strong> et <strong>faisabilité</strong> (R6, facteurs émergents) :
+            des incidents récents montrent l'urgence ; une réforme en cours offre un levier.
+            La <strong>portée</strong> se déduit des fonctions de résilience auxquelles le facteur contribue.</li>
+        </ul>
+      </details>
+      <div class="progression" id="progression">
+        <span id="progression-texte">0 facteur renseigné</span>
+        <span class="piste" role="progressbar" aria-label="Progression de la saisie" aria-valuemin="0" aria-valuemax="22" aria-valuenow="0"><span id="progression-barre"></span></span>
+      </div>
+      <div id="formulaire"><p>Chargement des données…</p></div>
+    </section>
+
+    <aside id="direct" class="direct pas-imprimer" aria-label="Résultat en direct"></aside>
+
+    <section id="resultats" aria-labelledby="titre-resultats">
+      <h2 id="titre-resultats">2. Résultat</h2>
+      <p class="note" id="contexte-resultat"></p>
+      <h3>Par dimension (R5)</h3>
+      <div class="defile"><table id="t-dimensions"></table></div>
+      <h3>Par fonction de résilience</h3>
+      <div class="defile"><table id="t-fonctions"></table></div>
+      <h3>Lacunes prioritaires (R6) et recommandations</h3>
+      <div class="defile"><table id="t-priorites"></table></div>
+      <h3>Recommandations non hiérarchisées</h3>
+      <p class="note">Facteurs structurés ou non évaluables : R6 ne les hiérarchise pas.</p>
+      <div class="defile"><table id="t-autres"></table></div>
+      <h3>Détail par facteur (R3)</h3>
+      <div class="defile"><table id="t-facteurs"></table></div>
+    </section>
+  </main>
+
+  <footer class="pied">
+    <div class="conteneur"><span class="sen">Sen</span><span class="cyr">CyR</span> © Copyright</div>
+  </footer>
+
+  <script src="js/regles.js"></script>
+  <script src="js/commun.js"></script>
+  <script src="js/diagnostic.js"></script>
+</body>
+</html>

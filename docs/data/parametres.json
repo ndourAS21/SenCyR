@@ -1,0 +1,17 @@
+{
+  "niveaux": ["émergent", "structuré", "consolidé"],
+  "statuts_hors_echelle": ["non évaluable", "hors périmètre"],
+  "confiance": ["faible", "moyenne", "élevée"],
+  "seuils_mesure_pct": {"structure": 60, "consolide": 80},
+  "confiance_mesure": {"methode": "wilson", "niveau_confiance_pct": 95},
+  "facteurs_mesures": {
+    "D5.2": {"intitule": "Contrôles de sécurité", "indicateurs": ["redir_https", "hsts", "entetes_3plus"]},
+    "D5.4": {"intitule": "Résilience des infrastructures de communication et d'Internet", "indicateurs": ["dnssec", "dmarc_applique"]}
+  },
+  "indicateurs_complementaires": {
+    "D5.1": {"intitule": "Adhésion aux normes", "indicateurs": ["cert_valide", "tls_moderne"]}
+  },
+  "taille_minimale_agregat": 3,
+  "mesure_passive": {"delai_entre_domaines_s": 2, "timeout_s": 8},
+  "pays": {"SN": "Sénégal", "GH": "Ghana", "MA": "Maroc", "CI": "Côte d'Ivoire"}
+}

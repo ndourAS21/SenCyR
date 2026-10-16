@@ -1,0 +1,38 @@
+[
+ {
+  "pays": "GH",
+  "score_global": "99.27",
+  "juridique": "20.00",
+  "technique": "20.00",
+  "organisationnel": "20.00",
+  "capacites": "19.27",
+  "cooperation": "20.00"
+ },
+ {
+  "pays": "MA",
+  "score_global": "97.49",
+  "juridique": "20.00",
+  "technique": "18.12",
+  "organisationnel": "20.00",
+  "capacites": "19.38",
+  "cooperation": "20.00"
+ },
+ {
+  "pays": "CI",
+  "score_global": "78.95",
+  "juridique": "19.43",
+  "technique": "15.30",
+  "organisationnel": "17.89",
+  "capacites": "11.26",
+  "cooperation": "15.07"
+ },
+ {
+  "pays": "SN",
+  "score_global": "67.34",
+  "juridique": "15.56",
+  "technique": "14.41",
+  "organisationnel": "9.06",
+  "capacites": "9.47",
+  "cooperation": "18.83"
+ }
+]

@@ -1,0 +1,592 @@
+{
+ "meta": {
+  "moteur": "SenCyR 1.1.0",
+  "date_export": "2026-10-16 09:54 UTC",
+  "pays_etudie": "SN",
+  "nb_domaines": 115,
+  "periode_mesure": [
+   "2026-10-12 03:10 UTC",
+   "2026-10-12 22:11 UTC"
+  ],
+  "parametres": {
+   "niveaux": [
+    "émergent",
+    "structuré",
+    "consolidé"
+   ],
+   "statuts_hors_echelle": [
+    "non évaluable",
+    "hors périmètre"
+   ],
+   "confiance": [
+    "faible",
+    "moyenne",
+    "élevée"
+   ],
+   "seuils_mesure_pct": {
+    "structure": 60,
+    "consolide": 80
+   },
+   "confiance_mesure": {
+    "methode": "wilson",
+    "niveau_confiance_pct": 95
+   },
+   "facteurs_mesures": {
+    "D5.2": {
+     "intitule": "Contrôles de sécurité",
+     "indicateurs": [
+      "redir_https",
+      "hsts",
+      "entetes_3plus"
+     ]
+    },
+    "D5.4": {
+     "intitule": "Résilience des infrastructures de communication et d'Internet",
+     "indicateurs": [
+      "dnssec",
+      "dmarc_applique"
+     ]
+    }
+   },
+   "indicateurs_complementaires": {
+    "D5.1": {
+     "intitule": "Adhésion aux normes",
+     "indicateurs": [
+      "cert_valide",
+      "tls_moderne"
+     ]
+    }
+   },
+   "taille_minimale_agregat": 3,
+   "mesure_passive": {
+    "delai_entre_domaines_s": 2,
+    "timeout_s": 8
+   },
+   "pays": {
+    "SN": "Sénégal",
+    "GH": "Ghana",
+    "MA": "Maroc",
+    "CI": "Côte d'Ivoire"
+   }
+  }
+ },
+ "pays": {
+  "CI": {
+   "nom": "Côte d'Ivoire",
+   "n": 25,
+   "indicateurs": {
+    "resolu": {
+     "libelle": "Domaine résolu",
+     "pct": 100,
+     "n": 25
+    },
+    "https_ok": {
+     "libelle": "Site accessible en HTTPS",
+     "pct": 100,
+     "n": 25
+    },
+    "cert_valide": {
+     "libelle": "Certificat valide",
+     "pct": 96,
+     "n": 25
+    },
+    "tls_moderne": {
+     "libelle": "TLS 1.2 ou 1.3",
+     "pct": 100,
+     "n": 25
+    },
+    "redir_https": {
+     "libelle": "Redirection HTTP vers HTTPS",
+     "pct": 88,
+     "n": 25
+    },
+    "hsts": {
+     "libelle": "En-tête HSTS",
+     "pct": 28,
+     "n": 25
+    },
+    "entetes_3plus": {
+     "libelle": "Au moins 3 en-têtes de sécurité",
+     "pct": 60,
+     "n": 25
+    },
+    "spf": {
+     "libelle": "Enregistrement SPF",
+     "pct": 96,
+     "n": 25
+    },
+    "dmarc": {
+     "libelle": "Enregistrement DMARC",
+     "pct": 68,
+     "n": 25
+    },
+    "dmarc_applique": {
+     "libelle": "DMARC appliqué (quarantine/reject)",
+     "pct": 60,
+     "n": 25
+    },
+    "dnssec": {
+     "libelle": "Zone signée DNSSEC",
+     "pct": 4,
+     "n": 25
+    },
+    "heberge_national": {
+     "libelle": "Adresse IP enregistrée dans le pays",
+     "pct": 76,
+     "n": 25
+    }
+   },
+   "secteurs": {
+    "Gouvernance": {
+     "n": 3,
+     "indicateurs": {
+      "resolu": {
+       "libelle": "Domaine résolu",
+       "pct": 100,
+       "n": 3
+      },
+      "https_ok": {
+       "libelle": "Site accessible en HTTPS",
+       "pct": 100,
+       "n": 3
+      },
+      "cert_valide": {
+       "libelle": "Certificat valide",
+       "pct": 67,
+       "n": 3
+      },
+      "tls_moderne": {
+       "libelle": "TLS 1.2 ou 1.3",
+       "pct": 100,
+       "n": 3
+      },
+      "redir_https": {
+       "libelle": "Redirection HTTP vers HTTPS",
+       "pct": 67,
+       "n": 3
+      },
+      "hsts": {
+       "libelle": "En-tête HSTS",
+       "pct": 67,
+       "n": 3
+      },
+      "entetes_3plus": {
+       "libelle": "Au moins 3 en-têtes de sécurité",
+       "pct": 67,
+       "n": 3
+      },
+      "spf": {
+       "libelle": "Enregistrement SPF",
+       "pct": 100,
+       "n": 3
+      },
+      "dmarc": {
+       "libelle": "Enregistrement DMARC",
+       "pct": 100,
+       "n": 3
+      },
+      "dmarc_applique": {
+       "libelle": "DMARC appliqué (quarantine/reject)",
+       "pct": 100,
+       "n": 3
+      },
+      "dnssec": {
+       "libelle": "Zone signée DNSSEC",
+       "pct": 33,
+       "n": 3
+      },
+      "heberge_national": {
+       "libelle": "Adresse IP enregistrée dans le pays",
+       "pct": 67,
+       "n": 3
+      }
+     }
+    }
+   },
+   "domaines_non_publies_par_secteur": 22,
+   "hebergement": {
+    "n": 25,
+    "nb_operateurs": 10,
+    "part_premier_operateur_pct": 60,
+    "pays_hebergement": {
+     "CI": 19,
+     "FR": 2,
+     "US": 2,
+     "DE": 1,
+     "CA": 1
+    }
+   }
+  },
+  "GH": {
+   "nom": "Ghana",
+   "n": 25,
+   "indicateurs": {
+    "resolu": {
+     "libelle": "Domaine résolu",
+     "pct": 100,
+     "n": 25
+    },
+    "https_ok": {
+     "libelle": "Site accessible en HTTPS",
+     "pct": 100,
+     "n": 25
+    },
+    "cert_valide": {
+     "libelle": "Certificat valide",
+     "pct": 100,
+     "n": 25
+    },
+    "tls_moderne": {
+     "libelle": "TLS 1.2 ou 1.3",
+     "pct": 100,
+     "n": 25
+    },
+    "redir_https": {
+     "libelle": "Redirection HTTP vers HTTPS",
+     "pct": 84,
+     "n": 25
+    },
+    "hsts": {
+     "libelle": "En-tête HSTS",
+     "pct": 48,
+     "n": 25
+    },
+    "entetes_3plus": {
+     "libelle": "Au moins 3 en-têtes de sécurité",
+     "pct": 44,
+     "n": 25
+    },
+    "spf": {
+     "libelle": "Enregistrement SPF",
+     "pct": 100,
+     "n": 25
+    },
+    "dmarc": {
+     "libelle": "Enregistrement DMARC",
+     "pct": 36,
+     "n": 25
+    },
+    "dmarc_applique": {
+     "libelle": "DMARC appliqué (quarantine/reject)",
+     "pct": 16,
+     "n": 25
+    },
+    "dnssec": {
+     "libelle": "Zone signée DNSSEC",
+     "pct": 0,
+     "n": 25
+    },
+    "heberge_national": {
+     "libelle": "Adresse IP enregistrée dans le pays",
+     "pct": 60,
+     "n": 25
+    }
+   },
+   "secteurs": {},
+   "domaines_non_publies_par_secteur": 25,
+   "hebergement": {
+    "n": 25,
+    "nb_operateurs": 13,
+    "part_premier_operateur_pct": 48,
+    "pays_hebergement": {
+     "GH": 15,
+     "US": 8,
+     "DE": 2
+    }
+   }
+  },
+  "MA": {
+   "nom": "Maroc",
+   "n": 25,
+   "indicateurs": {
+    "resolu": {
+     "libelle": "Domaine résolu",
+     "pct": 100,
+     "n": 25
+    },
+    "https_ok": {
+     "libelle": "Site accessible en HTTPS",
+     "pct": 96,
+     "n": 25
+    },
+    "cert_valide": {
+     "libelle": "Certificat valide",
+     "pct": 92,
+     "n": 25
+    },
+    "tls_moderne": {
+     "libelle": "TLS 1.2 ou 1.3",
+     "pct": 100,
+     "n": 25
+    },
+    "redir_https": {
+     "libelle": "Redirection HTTP vers HTTPS",
+     "pct": 72,
+     "n": 25
+    },
+    "hsts": {
+     "libelle": "En-tête HSTS",
+     "pct": 36,
+     "n": 25
+    },
+    "entetes_3plus": {
+     "libelle": "Au moins 3 en-têtes de sécurité",
+     "pct": 32,
+     "n": 25
+    },
+    "spf": {
+     "libelle": "Enregistrement SPF",
+     "pct": 96,
+     "n": 25
+    },
+    "dmarc": {
+     "libelle": "Enregistrement DMARC",
+     "pct": 68,
+     "n": 25
+    },
+    "dmarc_applique": {
+     "libelle": "DMARC appliqué (quarantine/reject)",
+     "pct": 48,
+     "n": 25
+    },
+    "dnssec": {
+     "libelle": "Zone signée DNSSEC",
+     "pct": 0,
+     "n": 25
+    },
+    "heberge_national": {
+     "libelle": "Adresse IP enregistrée dans le pays",
+     "pct": 60,
+     "n": 25
+    }
+   },
+   "secteurs": {
+    "Institutions": {
+     "n": 4,
+     "indicateurs": {
+      "resolu": {
+       "libelle": "Domaine résolu",
+       "pct": 100,
+       "n": 4
+      },
+      "https_ok": {
+       "libelle": "Site accessible en HTTPS",
+       "pct": 100,
+       "n": 4
+      },
+      "cert_valide": {
+       "libelle": "Certificat valide",
+       "pct": 100,
+       "n": 4
+      },
+      "tls_moderne": {
+       "libelle": "TLS 1.2 ou 1.3",
+       "pct": 100,
+       "n": 4
+      },
+      "redir_https": {
+       "libelle": "Redirection HTTP vers HTTPS",
+       "pct": 75,
+       "n": 4
+      },
+      "hsts": {
+       "libelle": "En-tête HSTS",
+       "pct": 50,
+       "n": 4
+      },
+      "entetes_3plus": {
+       "libelle": "Au moins 3 en-têtes de sécurité",
+       "pct": 25,
+       "n": 4
+      },
+      "spf": {
+       "libelle": "Enregistrement SPF",
+       "pct": 100,
+       "n": 4
+      },
+      "dmarc": {
+       "libelle": "Enregistrement DMARC",
+       "pct": 50,
+       "n": 4
+      },
+      "dmarc_applique": {
+       "libelle": "DMARC appliqué (quarantine/reject)",
+       "pct": 25,
+       "n": 4
+      },
+      "dnssec": {
+       "libelle": "Zone signée DNSSEC",
+       "pct": 0,
+       "n": 4
+      },
+      "heberge_national": {
+       "libelle": "Adresse IP enregistrée dans le pays",
+       "pct": 25,
+       "n": 4
+      }
+     }
+    }
+   },
+   "domaines_non_publies_par_secteur": 21,
+   "hebergement": {
+    "n": 25,
+    "nb_operateurs": 13,
+    "part_premier_operateur_pct": 24,
+    "pays_hebergement": {
+     "MA": 15,
+     "US": 9,
+     "FR": 1
+    }
+   }
+  },
+  "SN": {
+   "nom": "Sénégal",
+   "n": 40,
+   "indicateurs": {
+    "resolu": {
+     "libelle": "Domaine résolu",
+     "pct": 100,
+     "n": 40
+    },
+    "https_ok": {
+     "libelle": "Site accessible en HTTPS",
+     "pct": 98,
+     "n": 40
+    },
+    "cert_valide": {
+     "libelle": "Certificat valide",
+     "pct": 95,
+     "n": 40
+    },
+    "tls_moderne": {
+     "libelle": "TLS 1.2 ou 1.3",
+     "pct": 100,
+     "n": 40
+    },
+    "redir_https": {
+     "libelle": "Redirection HTTP vers HTTPS",
+     "pct": 85,
+     "n": 40
+    },
+    "hsts": {
+     "libelle": "En-tête HSTS",
+     "pct": 45,
+     "n": 40
+    },
+    "entetes_3plus": {
+     "libelle": "Au moins 3 en-têtes de sécurité",
+     "pct": 40,
+     "n": 40
+    },
+    "spf": {
+     "libelle": "Enregistrement SPF",
+     "pct": 95,
+     "n": 40
+    },
+    "dmarc": {
+     "libelle": "Enregistrement DMARC",
+     "pct": 42,
+     "n": 40
+    },
+    "dmarc_applique": {
+     "libelle": "DMARC appliqué (quarantine/reject)",
+     "pct": 28,
+     "n": 40
+    },
+    "dnssec": {
+     "libelle": "Zone signée DNSSEC",
+     "pct": 16,
+     "n": 32
+    },
+    "heberge_national": {
+     "libelle": "Adresse IP enregistrée dans le pays",
+     "pct": 70,
+     "n": 40
+    }
+   },
+   "secteurs": {
+    "Économie": {
+     "n": 5,
+     "indicateurs": {
+      "resolu": {
+       "libelle": "Domaine résolu",
+       "pct": 100,
+       "n": 5
+      },
+      "https_ok": {
+       "libelle": "Site accessible en HTTPS",
+       "pct": 100,
+       "n": 5
+      },
+      "cert_valide": {
+       "libelle": "Certificat valide",
+       "pct": 100,
+       "n": 5
+      },
+      "tls_moderne": {
+       "libelle": "TLS 1.2 ou 1.3",
+       "pct": 100,
+       "n": 5
+      },
+      "redir_https": {
+       "libelle": "Redirection HTTP vers HTTPS",
+       "pct": 100,
+       "n": 5
+      },
+      "hsts": {
+       "libelle": "En-tête HSTS",
+       "pct": 40,
+       "n": 5
+      },
+      "entetes_3plus": {
+       "libelle": "Au moins 3 en-têtes de sécurité",
+       "pct": 60,
+       "n": 5
+      },
+      "spf": {
+       "libelle": "Enregistrement SPF",
+       "pct": 100,
+       "n": 5
+      },
+      "dmarc": {
+       "libelle": "Enregistrement DMARC",
+       "pct": 100,
+       "n": 5
+      },
+      "dmarc_applique": {
+       "libelle": "DMARC appliqué (quarantine/reject)",
+       "pct": 40,
+       "n": 5
+      },
+      "dnssec": {
+       "libelle": "Zone signée DNSSEC",
+       "pct": 0,
+       "n": 5
+      },
+      "heberge_national": {
+       "libelle": "Adresse IP enregistrée dans le pays",
+       "pct": 40,
+       "n": 5
+      }
+     }
+    }
+   },
+   "domaines_non_publies_par_secteur": 35,
+   "hebergement": {
+    "n": 40,
+    "nb_operateurs": 15,
+    "part_premier_operateur_pct": 38,
+    "pays_hebergement": {
+     "SN": 28,
+     "FR": 4,
+     "US": 3,
+     "GB": 1,
+     "UA": 1,
+     "IT": 1,
+     "DE": 1,
+     "CH": 1
+    }
+   }
+  }
+ }
+}

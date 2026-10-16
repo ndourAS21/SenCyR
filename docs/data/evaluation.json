@@ -1,0 +1,639 @@
+{
+ "meta": {
+  "moteur": "SenCyR 1.1.0",
+  "date_export": "2026-10-16 09:54 UTC",
+  "pays_etudie": "SN",
+  "nb_domaines": 115,
+  "periode_mesure": [
+   "2026-10-12 03:10 UTC",
+   "2026-10-12 22:11 UTC"
+  ],
+  "parametres": {
+   "niveaux": [
+    "émergent",
+    "structuré",
+    "consolidé"
+   ],
+   "statuts_hors_echelle": [
+    "non évaluable",
+    "hors périmètre"
+   ],
+   "confiance": [
+    "faible",
+    "moyenne",
+    "élevée"
+   ],
+   "seuils_mesure_pct": {
+    "structure": 60,
+    "consolide": 80
+   },
+   "confiance_mesure": {
+    "methode": "wilson",
+    "niveau_confiance_pct": 95
+   },
+   "facteurs_mesures": {
+    "D5.2": {
+     "intitule": "Contrôles de sécurité",
+     "indicateurs": [
+      "redir_https",
+      "hsts",
+      "entetes_3plus"
+     ]
+    },
+    "D5.4": {
+     "intitule": "Résilience des infrastructures de communication et d'Internet",
+     "indicateurs": [
+      "dnssec",
+      "dmarc_applique"
+     ]
+    }
+   },
+   "indicateurs_complementaires": {
+    "D5.1": {
+     "intitule": "Adhésion aux normes",
+     "indicateurs": [
+      "cert_valide",
+      "tls_moderne"
+     ]
+    }
+   },
+   "taille_minimale_agregat": 3,
+   "mesure_passive": {
+    "delai_entre_domaines_s": 2,
+    "timeout_s": 8
+   },
+   "pays": {
+    "SN": "Sénégal",
+    "GH": "Ghana",
+    "MA": "Maroc",
+    "CI": "Côte d'Ivoire"
+   }
+  }
+ },
+ "pays": {
+  "CI": [
+   {
+    "type": "facteur",
+    "code": "D5.2",
+    "intitule": "Contrôles de sécurité",
+    "dimension": "D5",
+    "niveau": "émergent",
+    "confiance": "élevée",
+    "base": "mesure (n=25)",
+    "detail": "Redirection HTTP vers HTTPS 88 % (IC 70-96 %) ; En-tête HSTS 28 % (IC 14-48 %) ; Au moins 3 en-têtes de sécurité 60 % (IC 41-77 %)",
+    "priorite": null,
+    "recommandation": "",
+    "fonction_recommandation": ""
+   },
+   {
+    "type": "facteur",
+    "code": "D5.4",
+    "intitule": "Résilience des infrastructures de communication et d'Internet",
+    "dimension": "D5",
+    "niveau": "émergent",
+    "confiance": "élevée",
+    "base": "mesure (n=25)",
+    "detail": "Zone signée DNSSEC 4 % (IC 1-20 %) ; DMARC appliqué (quarantine/reject) 60 % (IC 41-77 %)",
+    "priorite": null,
+    "recommandation": "",
+    "fonction_recommandation": ""
+   },
+   {
+    "type": "complementaire",
+    "code": "D5.1",
+    "intitule": "Adhésion aux normes",
+    "dimension": "D5",
+    "niveau": "consolidé",
+    "confiance": "élevée",
+    "base": "mesure (n=25), indicateur complémentaire",
+    "detail": "Certificat valide 96 % (IC 80-99 %) ; TLS 1.2 ou 1.3 100 % (IC 87-100 %)"
+   }
+  ],
+  "GH": [
+   {
+    "type": "facteur",
+    "code": "D5.2",
+    "intitule": "Contrôles de sécurité",
+    "dimension": "D5",
+    "niveau": "émergent",
+    "confiance": "moyenne",
+    "base": "mesure (n=25)",
+    "detail": "Redirection HTTP vers HTTPS 84 % (IC 65-94 %) ; En-tête HSTS 48 % (IC 30-67 %) ; Au moins 3 en-têtes de sécurité 44 % (IC 27-63 %)",
+    "priorite": null,
+    "recommandation": "",
+    "fonction_recommandation": ""
+   },
+   {
+    "type": "facteur",
+    "code": "D5.4",
+    "intitule": "Résilience des infrastructures de communication et d'Internet",
+    "dimension": "D5",
+    "niveau": "émergent",
+    "confiance": "élevée",
+    "base": "mesure (n=25)",
+    "detail": "Zone signée DNSSEC 0 % (IC 0-13 %) ; DMARC appliqué (quarantine/reject) 16 % (IC 6-35 %)",
+    "priorite": null,
+    "recommandation": "",
+    "fonction_recommandation": ""
+   },
+   {
+    "type": "complementaire",
+    "code": "D5.1",
+    "intitule": "Adhésion aux normes",
+    "dimension": "D5",
+    "niveau": "consolidé",
+    "confiance": "élevée",
+    "base": "mesure (n=25), indicateur complémentaire",
+    "detail": "Certificat valide 100 % (IC 87-100 %) ; TLS 1.2 ou 1.3 100 % (IC 87-100 %)"
+   }
+  ],
+  "MA": [
+   {
+    "type": "facteur",
+    "code": "D5.2",
+    "intitule": "Contrôles de sécurité",
+    "dimension": "D5",
+    "niveau": "émergent",
+    "confiance": "élevée",
+    "base": "mesure (n=25)",
+    "detail": "Redirection HTTP vers HTTPS 72 % (IC 52-86 %) ; En-tête HSTS 36 % (IC 20-55 %) ; Au moins 3 en-têtes de sécurité 32 % (IC 17-52 %)",
+    "priorite": null,
+    "recommandation": "",
+    "fonction_recommandation": ""
+   },
+   {
+    "type": "facteur",
+    "code": "D5.4",
+    "intitule": "Résilience des infrastructures de communication et d'Internet",
+    "dimension": "D5",
+    "niveau": "émergent",
+    "confiance": "moyenne",
+    "base": "mesure (n=25)",
+    "detail": "Zone signée DNSSEC 0 % (IC 0-13 %) ; DMARC appliqué (quarantine/reject) 48 % (IC 30-67 %)",
+    "priorite": null,
+    "recommandation": "",
+    "fonction_recommandation": ""
+   },
+   {
+    "type": "complementaire",
+    "code": "D5.1",
+    "intitule": "Adhésion aux normes",
+    "dimension": "D5",
+    "niveau": "consolidé",
+    "confiance": "moyenne",
+    "base": "mesure (n=25), indicateur complémentaire",
+    "detail": "Certificat valide 92 % (IC 75-98 %) ; TLS 1.2 ou 1.3 100 % (IC 87-100 %)"
+   }
+  ],
+  "SN": [
+   {
+    "type": "facteur",
+    "code": "D1.1",
+    "intitule": "Stratégie nationale",
+    "dimension": "D1",
+    "niveau": "émergent",
+    "confiance": "élevée",
+    "base": "documentaire",
+    "detail": "sources 8;9;10;35",
+    "priorite": 1,
+    "recommandation": "A1 : Faire aboutir le projet de loi n°25/2026 : promulgation, décrets, installation de l'Autorité, rattachement des structures existantes de réponse aux incidents, selon un calendrier public ; A5 : Adopter une stratégie nationale qui succède à la SNC2022, articulée au New Deal technologique et à la réforme de 2026",
+    "fonction_recommandation": "Anticiper ; s'adapter"
+   },
+   {
+    "type": "aspect",
+    "code": "D1.1a",
+    "intitule": "Stratégie",
+    "dimension": "D1",
+    "niveau": "émergent",
+    "confiance": "moyenne",
+    "base": "documentaire",
+    "detail": "sources 8;35",
+    "priorite": null,
+    "recommandation": "",
+    "fonction_recommandation": ""
+   },
+   {
+    "type": "aspect",
+    "code": "D1.1b",
+    "intitule": "Gouvernance centrale",
+    "dimension": "D1",
+    "niveau": "émergent",
+    "confiance": "élevée",
+    "base": "documentaire",
+    "detail": "sources 8;9;10;35",
+    "priorite": null,
+    "recommandation": "",
+    "fonction_recommandation": ""
+   },
+   {
+    "type": "aspect",
+    "code": "D1.1c",
+    "intitule": "Ressources",
+    "dimension": "D1",
+    "niveau": "non évaluable",
+    "confiance": "—",
+    "base": "documentaire",
+    "detail": "sources ",
+    "priorite": null,
+    "recommandation": "",
+    "fonction_recommandation": ""
+   },
+   {
+    "type": "facteur",
+    "code": "D1.2",
+    "intitule": "Réponse aux incidents et gestion de crise",
+    "dimension": "D1",
+    "niveau": "émergent",
+    "confiance": "moyenne",
+    "base": "documentaire",
+    "detail": "sources 9;25;27;36",
+    "priorite": 1,
+    "recommandation": "A2 : Rendre visible le CERT national prévu par la réforme (mission publiée selon la RFC 2350, avis publics, adhésion aux réseaux FIRST et AfricaCERT) et appliquer aux administrations la notification des incidents sous 24 heures prévue par le projet de loi ; A3 : Adopter une doctrine de communication de crise, publier un bilan après chaque incident et étendre les plans de continuité aux administrations non classées",
+    "fonction_recommandation": "Répondre et se rétablir"
+   },
+   {
+    "type": "facteur",
+    "code": "D1.3",
+    "intitule": "Protection des infrastructures critiques",
+    "dimension": "D1",
+    "niveau": "émergent",
+    "confiance": "élevée",
+    "base": "documentaire",
+    "detail": "sources 9;53",
+    "priorite": 2,
+    "recommandation": "A4 : Classer les exploitants d'infrastructures d'information critiques et faire respecter, dès la promulgation, le programme de cybersécurité exigé dans les six mois",
+    "fonction_recommandation": "Anticiper ; résister"
+   },
+   {
+    "type": "facteur",
+    "code": "D1.4",
+    "intitule": "Cybersécurité de la défense et de la sécurité nationale",
+    "dimension": "D1",
+    "niveau": "hors périmètre",
+    "confiance": "—",
+    "base": "documentaire",
+    "detail": "sources ",
+    "priorite": null,
+    "recommandation": "",
+    "fonction_recommandation": ""
+   },
+   {
+    "type": "facteur",
+    "code": "D2.1",
+    "intitule": "État d'esprit de cybersécurité",
+    "dimension": "D2",
+    "niveau": "émergent",
+    "confiance": "moyenne",
+    "base": "documentaire",
+    "detail": "sources 8;54",
+    "priorite": 3,
+    "recommandation": "B2 : Étendre le volet cybersécurité de l'enquête ENTICS et évaluer publiquement les campagnes de sensibilisation",
+    "fonction_recommandation": "Anticiper"
+   },
+   {
+    "type": "facteur",
+    "code": "D2.2",
+    "intitule": "Confiance dans les services en ligne",
+    "dimension": "D2",
+    "niveau": "émergent",
+    "confiance": "faible",
+    "base": "documentaire",
+    "detail": "sources 54",
+    "priorite": 3,
+    "recommandation": "B2 : Étendre le volet cybersécurité de l'enquête ENTICS et évaluer publiquement les campagnes de sensibilisation",
+    "fonction_recommandation": "Anticiper"
+   },
+   {
+    "type": "facteur",
+    "code": "D2.3",
+    "intitule": "Compréhension de la protection des données par les usagers",
+    "dimension": "D2",
+    "niveau": "non évaluable",
+    "confiance": "—",
+    "base": "documentaire",
+    "detail": "sources 55",
+    "priorite": null,
+    "recommandation": "",
+    "fonction_recommandation": "Anticiper"
+   },
+   {
+    "type": "facteur",
+    "code": "D2.4",
+    "intitule": "Mécanismes de signalement",
+    "dimension": "D2",
+    "niveau": "structuré",
+    "confiance": "moyenne",
+    "base": "documentaire",
+    "detail": "sources 45;46;55;56",
+    "priorite": null,
+    "recommandation": "",
+    "fonction_recommandation": "Répondre et se rétablir"
+   },
+   {
+    "type": "facteur",
+    "code": "D2.5",
+    "intitule": "Médias et plateformes en ligne",
+    "dimension": "D2",
+    "niveau": "non évaluable",
+    "confiance": "—",
+    "base": "documentaire",
+    "detail": "sources ",
+    "priorite": null,
+    "recommandation": "",
+    "fonction_recommandation": ""
+   },
+   {
+    "type": "facteur",
+    "code": "D3.1",
+    "intitule": "Sensibilisation",
+    "dimension": "D3",
+    "niveau": "émergent",
+    "confiance": "moyenne",
+    "base": "documentaire",
+    "detail": "sources 8;55",
+    "priorite": 3,
+    "recommandation": "B2 : Étendre le volet cybersécurité de l'enquête ENTICS et évaluer publiquement les campagnes de sensibilisation",
+    "fonction_recommandation": "Anticiper"
+   },
+   {
+    "type": "facteur",
+    "code": "D3.2",
+    "intitule": "Enseignement",
+    "dimension": "D3",
+    "niveau": "structuré",
+    "confiance": "élevée",
+    "base": "documentaire",
+    "detail": "sources 15;57",
+    "priorite": null,
+    "recommandation": "",
+    "fonction_recommandation": ""
+   },
+   {
+    "type": "facteur",
+    "code": "D3.3",
+    "intitule": "Formation professionnelle",
+    "dimension": "D3",
+    "niveau": "émergent",
+    "confiance": "moyenne",
+    "base": "documentaire",
+    "detail": "sources 58",
+    "priorite": 3,
+    "recommandation": "B3 : Publier les effectifs, les besoins et les formations en cybersécurité de l'administration",
+    "fonction_recommandation": "Résister"
+   },
+   {
+    "type": "facteur",
+    "code": "D3.4",
+    "intitule": "Recherche et innovation",
+    "dimension": "D3",
+    "niveau": "émergent",
+    "confiance": "moyenne",
+    "base": "documentaire",
+    "detail": "sources 1",
+    "priorite": 3,
+    "recommandation": "",
+    "fonction_recommandation": ""
+   },
+   {
+    "type": "facteur",
+    "code": "D4.1",
+    "intitule": "Dispositions juridiques et réglementaires",
+    "dimension": "D4",
+    "niveau": "structuré",
+    "confiance": "élevée",
+    "base": "documentaire",
+    "detail": "sources 31;25",
+    "priorite": null,
+    "recommandation": "A6 : Évaluer l'adéquation de la loi n°2008-11 aux modes opératoires récents (rançongiciel, double extorsion) et la réviser si besoin",
+    "fonction_recommandation": "S'adapter"
+   },
+   {
+    "type": "facteur",
+    "code": "D4.2",
+    "intitule": "Cadre législatif connexe",
+    "dimension": "D4",
+    "niveau": "structuré",
+    "confiance": "élevée",
+    "base": "documentaire",
+    "detail": "sources 26;30;55;56",
+    "priorite": null,
+    "recommandation": "",
+    "fonction_recommandation": ""
+   },
+   {
+    "type": "facteur",
+    "code": "D4.3",
+    "intitule": "Capacités juridiques et réglementaires",
+    "dimension": "D4",
+    "niveau": "structuré",
+    "confiance": "moyenne",
+    "base": "documentaire",
+    "detail": "sources 46;58",
+    "priorite": null,
+    "recommandation": "B4 : Publier les statistiques judiciaires de la cybercriminalité : enquêtes, poursuites, condamnations, demandes d'entraide internationale",
+    "fonction_recommandation": "Répondre et se rétablir"
+   },
+   {
+    "type": "facteur",
+    "code": "D4.4",
+    "intitule": "Coopération contre la cybercriminalité",
+    "dimension": "D4",
+    "niveau": "structuré",
+    "confiance": "élevée",
+    "base": "documentaire",
+    "detail": "sources 32;34;59",
+    "priorite": null,
+    "recommandation": "",
+    "fonction_recommandation": ""
+   },
+   {
+    "type": "facteur",
+    "code": "D5.1",
+    "intitule": "Adhésion aux normes",
+    "dimension": "D5",
+    "niveau": "émergent",
+    "confiance": "moyenne",
+    "base": "documentaire",
+    "detail": "sources 24",
+    "priorite": 2,
+    "recommandation": "A4 : Classer les exploitants d'infrastructures d'information critiques et faire respecter, dès la promulgation, le programme de cybersécurité exigé dans les six mois ; B5 : Rendre public l'état d'application de la PSSI-ES et publier une politique de divulgation responsable des vulnérabilités",
+    "fonction_recommandation": "Anticiper ; résister"
+   },
+   {
+    "type": "facteur",
+    "code": "D5.2",
+    "intitule": "Contrôles de sécurité",
+    "dimension": "D5",
+    "niveau": "émergent",
+    "confiance": "moyenne",
+    "base": "mesure (n=40)",
+    "detail": "Redirection HTTP vers HTTPS 85 % (IC 71-93 %) ; En-tête HSTS 45 % (IC 31-60 %) ; Au moins 3 en-têtes de sécurité 40 % (IC 26-55 %)",
+    "priorite": 3,
+    "recommandation": "B6 : Généraliser HSTS, les en-têtes de sécurité, DMARC en mode quarantaine ou rejet et la signature DNSSEC des zones publiques ; refaire la mesure chaque année",
+    "fonction_recommandation": "Résister"
+   },
+   {
+    "type": "facteur",
+    "code": "D5.3",
+    "intitule": "Qualité logicielle",
+    "dimension": "D5",
+    "niveau": "non évaluable",
+    "confiance": "—",
+    "base": "documentaire",
+    "detail": "sources ",
+    "priorite": null,
+    "recommandation": "",
+    "fonction_recommandation": ""
+   },
+   {
+    "type": "facteur",
+    "code": "D5.4",
+    "intitule": "Résilience des infrastructures de communication et d'Internet",
+    "dimension": "D5",
+    "niveau": "émergent",
+    "confiance": "élevée",
+    "base": "mesure (n=40)",
+    "detail": "Zone signée DNSSEC 16 % (IC 7-32 %) ; DMARC appliqué (quarantine/reject) 28 % (IC 16-43 %)",
+    "priorite": 3,
+    "recommandation": "B6 : Généraliser HSTS, les en-têtes de sécurité, DMARC en mode quarantaine ou rejet et la signature DNSSEC des zones publiques ; refaire la mesure chaque année",
+    "fonction_recommandation": "Résister"
+   },
+   {
+    "type": "facteur",
+    "code": "D5.5",
+    "intitule": "Marché de la cybersécurité",
+    "dimension": "D5",
+    "niveau": "non évaluable",
+    "confiance": "—",
+    "base": "documentaire",
+    "detail": "sources ",
+    "priorite": null,
+    "recommandation": "",
+    "fonction_recommandation": ""
+   },
+   {
+    "type": "facteur",
+    "code": "D5.6",
+    "intitule": "Divulgation responsable",
+    "dimension": "D5",
+    "niveau": "émergent",
+    "confiance": "moyenne",
+    "base": "documentaire",
+    "detail": "sources ",
+    "priorite": 3,
+    "recommandation": "B5 : Rendre public l'état d'application de la PSSI-ES et publier une politique de divulgation responsable des vulnérabilités",
+    "fonction_recommandation": "Résister"
+   },
+   {
+    "type": "complementaire",
+    "code": "D5.1",
+    "intitule": "Adhésion aux normes",
+    "dimension": "D5",
+    "niveau": "consolidé",
+    "confiance": "élevée",
+    "base": "mesure (n=40), indicateur complémentaire",
+    "detail": "Certificat valide 95 % (IC 83-99 %) ; TLS 1.2 ou 1.3 100 % (IC 91-100 %)"
+   },
+   {
+    "type": "dimension",
+    "code": "D1",
+    "intitule": "Politique et stratégie",
+    "dimension": "D1",
+    "niveau": "émergent",
+    "confiance": "moyenne",
+    "base": "",
+    "detail": "3 facteurs évaluables sur 3"
+   },
+   {
+    "type": "dimension",
+    "code": "D2",
+    "intitule": "Culture et société",
+    "dimension": "D2",
+    "niveau": "émergent",
+    "confiance": "faible",
+    "base": "",
+    "detail": "3 facteurs évaluables sur 5"
+   },
+   {
+    "type": "dimension",
+    "code": "D3",
+    "intitule": "Connaissances et capacités",
+    "dimension": "D3",
+    "niveau": "émergent",
+    "confiance": "moyenne",
+    "base": "",
+    "detail": "4 facteurs évaluables sur 4"
+   },
+   {
+    "type": "dimension",
+    "code": "D4",
+    "intitule": "Cadres juridiques et réglementaires",
+    "dimension": "D4",
+    "niveau": "structuré",
+    "confiance": "moyenne",
+    "base": "",
+    "detail": "4 facteurs évaluables sur 4"
+   },
+   {
+    "type": "dimension",
+    "code": "D5",
+    "intitule": "Normes et technologies",
+    "dimension": "D5",
+    "niveau": "émergent",
+    "confiance": "moyenne",
+    "base": "",
+    "detail": "4 facteurs évaluables sur 6"
+   },
+   {
+    "type": "fonction",
+    "code": "Anticiper",
+    "intitule": "D1.1, D1.3, D2.1, D3.1",
+    "dimension": "",
+    "niveau": "émergent",
+    "confiance": "moyenne",
+    "base": "",
+    "detail": "4 facteurs évaluables sur 4"
+   },
+   {
+    "type": "fonction",
+    "code": "Résister",
+    "intitule": "D5.1, D5.2, D5.3, D5.4, D5.6, D3.3",
+    "dimension": "",
+    "niveau": "émergent",
+    "confiance": "moyenne",
+    "base": "",
+    "detail": "5 facteurs évaluables sur 6"
+   },
+   {
+    "type": "fonction",
+    "code": "Répondre et se rétablir",
+    "intitule": "D1.2, D2.4, D4.3, D4.4",
+    "dimension": "",
+    "niveau": "structuré",
+    "confiance": "moyenne",
+    "base": "",
+    "detail": "4 facteurs évaluables sur 4"
+   },
+   {
+    "type": "fonction",
+    "code": "S'adapter",
+    "intitule": "D1.1a, D3.4, D4.1",
+    "dimension": "",
+    "niveau": "émergent",
+    "confiance": "moyenne",
+    "base": "",
+    "detail": "3 facteurs évaluables sur 3"
+   },
+   {
+    "type": "fonction",
+    "code": "Contribution transversale",
+    "intitule": "D2.2, D2.3, D2.5, D3.2, D4.2",
+    "dimension": "",
+    "niveau": "structuré",
+    "confiance": "élevée",
+    "base": "",
+    "detail": "3 facteurs évaluables sur 5"
+   }
+  ]
+ }
+}

@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SenCyR · Benchmark</title>
+  <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/fond.js"></script>
+  <script src="js/entete.js"></script>
+  <script src="js/animations.js"></script>
+</head>
+<body>
+  <header class="entete">
+    <div class="entete-barre">
+      <a class="marque" href="index.html" aria-label="SenCyR, accueil">
+        <img src="img/logo-sencyr.svg" alt="" width="36" height="36">
+        <span class="nom" aria-hidden="true"><span class="sen">Sen</span><span class="cyr">CyR</span></span>
+      </a>
+      <nav aria-label="Navigation principale">
+        <a href="index.html">Accueil</a>
+        <a href="diagnostic.html">Auto-diagnostic</a>
+        <a href="tableau-de-bord.html">Tableau de bord</a>
+        <a href="benchmark.html" aria-current="page">Benchmark</a>
+        <a href="methode.html">Méthode</a>
+      </nav>
+    </div>
+  </header>
+  <p class="marque-impression" aria-hidden="true"><span class="sen">Sen</span><span class="cyr">CyR</span></p>
+
+  <main class="conteneur">
+    <h1>Comparaison entre pays : Sénégal, Ghana, Maroc, Côte d'Ivoire</h1>
+    <p class="avertissement">
+      Deux sources présentées séparément, sans être combinées : d'une part les indicateurs
+      techniques mesurés par SenCyR sur les sites publics des quatre pays (même méthode, même
+      période) ; d'autre part les scores du Global Cybersecurity Index 2024, source extérieure.
+    </p>
+    <div id="source" class="source" role="status">Chargement des données…</div>
+    <div id="selection" class="filtres"></div>
+
+    <h2>1. Indicateurs mesurés, en pourcentage de sites</h2>
+    <p class="legende-seuils" id="legende"></p>
+    <div id="indicateurs" class="grille-indicateurs"></div>
+
+    <h2>2. Facteurs appréciés par la mesure</h2>
+    <div id="facteurs"></div>
+
+    <section class="externe" aria-labelledby="titre-gci">
+      <p class="externe-etiquette">Source extérieure</p>
+      <h2 id="titre-gci">3. Référence : Global Cybersecurity Index 2024</h2>
+      <p class="note">Indice publié par l'Union internationale des télécommunications (UIT), fondé sur les
+        déclarations des États (source de niveau B, voir <a href="methode.html#fiabilite">Méthode</a>).
+        Scores repris tels que publiés, sur 100 pour le score global et sur 20 par pilier : ils ne sont ni
+        recalculés ni combinés avec les mesures SenCyR.</p>
+      <div class="defile"><table id="t-gci"></table></div>
+    </section>
+  </main>
+
+  <footer class="pied">
+    <div class="conteneur"><span class="sen">Sen</span><span class="cyr">CyR</span> © Copyright</div>
+  </footer>
+
+  <script src="js/regles.js"></script>
+  <script src="js/commun.js"></script>
+  <script src="js/benchmark.js"></script>
+</body>
+</html>
